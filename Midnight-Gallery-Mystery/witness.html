@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witness Statements</title>
+</head>
+<body>
+    <header>
+        
+    <nav>
+        <ol>
+            <li><a href="suspects.html">Suspects</a></li>
+            <li><a href="evidence.html">Evidence</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="witness.html">Witness</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="Mystery.html">Mystery</a></li>
+        </ol>
+    </nav>
+    <h1>Witness Statement Form</h1>
+    <p>The Midnight Gallery Mystery</p>
+    <p> Please complete this form to report what you observed
+            on the night of the gallery disappearance.</p>
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Witness Information</legend>
+                <label>Witness Name:</label>
+                <input type="text" name="witnessName" placeholder="Enter Your Name"
+                minlength="8"
+                maxlength="40" required>
+                <br><br>
+
+                <label>Email Address:</label>
+                <input type="email" name="witnessEmail" placeholder="witness@example.com" required>
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend for="Observation-date">Observation Details:</legend>
+                <label>Observation Details</label>
+                <input type="date" name="Observation date" required>
+                <br><br>
+
+                <label for="Observation-time">Time of Observation:</label>
+                <input type="time" name="Observatioon-time" >
+                <br><br>
+
+                <p>Where were you?</p>
+                <input type="radio" id="inside" name="location" required>
+                <label for="inside">Inside the gallery</label>
+                <br>
+
+                <input type="radio" id="outside" name="location" required>
+                <label for="outside">Outside the gallery</label>
+                <br><br>
+
+                <p>Choose your gender.</p>
+                <input type="radio"  id="male" name="gender" >
+                <label for="male">Male</label><br>
+
+               <input type="radio"  id="female" name="gender" >
+                <label for="female">Female</label><br><br>
+                <br><br>
+
+                <p>What did you notice? Select all that apply.</p>
+                <input type="checkbox" name="detail">
+                 <label for="clothing">Clothing</label>
+
+                 <input type="checkbox" nam="detail">
+                 <label for="direction">Direction of movement</label>
+
+                 <input type="checkbox" name="object">
+                 <label for="object">An object</label><br><br>
+
+                 <label type="observation-type">Type of Observation:</label>
+                 <select>
+                   <option value="select">Select </option>
+                    <option value="person">Person</option>
+                    <option value="vehicle">Vehicle</option>
+                    <option value="sound">Sound</option>
+                    <option value="other">Other</option>
+                 </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                     <legend>Your Statement</legend>
+
+                <label>Describe what you observed</label><br>
+                
+                <br><br>
+               <textarea
+    id="statement"
+    name="statement"
+    placeholder="Describe briefly..."
+    rows="5"
+    cols="40"
+    required
+></textarea>
+<br><br>
+                <label> How confident are you in your observation?</label>
+                <br>
+            <input type="range" name="confidence" min="1" max="10" value="5" >
+            <br><br>
+
+            <label for="contsct-time">Preferred Contact Time:</label>
+
+            <input type="time" id="contact-time" name="contactTime">
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <lagend>Evidence Upload (Optional)</lagend>
+
+                <label for="evidence">Upload an image or PDF:</label>
+                <br><br>
+                <input type="file" id="evidence" >
+            </fieldset>
+             <br>
+             <button type="submit">Submit Statement</button>
+             
+             <button type="reset">Reset Form</button>
+         </form>
+    </main>
+</body>
+</html>
